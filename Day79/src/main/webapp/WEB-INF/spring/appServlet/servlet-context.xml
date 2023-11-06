@@ -28,4 +28,14 @@
 	<!-- request Method를 구분하지 않는다 -->
 	<view-controller path="/" view-name="home"/>
 	
+	<!-- mapping에 /board/*는 바로 아래 경로 모두를 적용 -->
+	<!-- mapping에 /board/**는 모든 하위 경로를 적용-->
+	<interceptors>
+		<interceptor>
+			<mapping path="/account/myPage/{idx}"/>
+			<mapping path="/board/**"/>
+			<beans:bean id="login" class="com.itbank.interceptor.LoginInterceptor" />
+		</interceptor>
+	</interceptors>
+	
 </beans:beans>
