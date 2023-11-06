@@ -24,4 +24,8 @@ public class BoardService {
 	public int addBoard(BoardDTO input) {
 		return dao.insert(input);
 	}
+
+	public int delete(int idx) {		
+		return dao.delete(idx);
+	}
 }

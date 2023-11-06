@@ -19,6 +19,17 @@
 			<td colspan="6"><pre>${row.content }</pre></td>
 		</tr>
 	</table>
+	
+	<c:if test="${user.nick == row.writer }">	
+		<p>
+			<a href="${cpath }/board/update/${row.idx }">
+				<button>수정</button>
+			</a>
+			<a href="${cpath }/board/delete/${row.idx }">
+				<button>삭제</button>
+			</a>
+		</p>
+	</c:if>
 </article>
 </body>
 </html>

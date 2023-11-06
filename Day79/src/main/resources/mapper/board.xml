@@ -21,4 +21,9 @@
 		insert into board(title, writer, content)
 			values(#{title}, #{writer}, #{content})
 	</insert>
+	
+	<delete id="delete"
+			parameterType="int">
+		delete from board where idx = #{idx}
+	</delete>
 </mapper>

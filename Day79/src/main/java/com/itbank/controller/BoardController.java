@@ -45,4 +45,15 @@ public class BoardController {
 		
 		return mav;
 	}
+	
+	@GetMapping("/delete/${idx}")
+	public ModelAndView delete(@PathVariable int idx) {
+		ModelAndView mav = new ModelAndView();
+		
+		mav.addObject("row", bs.delete(idx));
+		mav.addObject("message", "삭제 완료");
+		mav.addObject("loc", "board/list");
+		
+		return mav;
+	}
 }
