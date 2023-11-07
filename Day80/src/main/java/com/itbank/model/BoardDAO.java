@@ -2,16 +2,17 @@ package com.itbank.model;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Select;
-
+import com.itbank.components.Paging;
 import com.itbank.model.dto.BoardDTO;
 
 public interface BoardDAO {
 
-	@Select("select * from board "
-				+ "order by idx desc "
-				+ "offset 0 rows "
-				+ "fetch first 20 rows only")
-	List<BoardDTO> selectAll();
+	List<BoardDTO> selectAll(Paging p);
+
+	void testInsert();
+
+	int totalBoard();
+
+	BoardDTO selectOne(int idx);
 
 }
