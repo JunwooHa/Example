@@ -31,9 +31,11 @@ public class BoardController {
 	
 	@PostMapping("/view/{idx}")
 	public ModelAndView reply(ReplyDTO input) {
-		ModelAndView mav = new ModelAndView("redirect:/board/view");
+		ModelAndView mav = new ModelAndView("msg");
 		
-		
+		mav.addObject("row", rs.addReply(input));
+		mav.addObject("message", "댓글 작성 완료");
+		mav.addObject("location", "board/view");
 		
 		return mav;
 	}
