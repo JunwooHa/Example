@@ -30,7 +30,7 @@
 				<button>작성</button>
 			</section>
 		</form>
-	<c:forEach  var="rp" items="${rps }">	
+	<c:forEach var="rp" items="${rps }">	
 		<p>
 		${rp.writer } (x)<br>
 		${rp.contents }<br>

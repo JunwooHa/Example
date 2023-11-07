@@ -12,4 +12,9 @@
 <body>
 	<h1>${cpath } - Board</h1>
 	
+	<ul class="menu">
+		<li><a href="${cpath }">home</a></li>
+		<li><a href="${cpath }/board/write">write</a></li>
+	</ul>
+	
 	<hr>

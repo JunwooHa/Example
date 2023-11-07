@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.itbank.model.dto.BoardDTO;
 import com.itbank.model.dto.ReplyDTO;
 import com.itbank.service.BoardService;
 import com.itbank.service.ReplyService;
@@ -35,6 +36,18 @@ public class BoardController {
 		
 		
 		
+		return mav;
+	}
+	
+	@GetMapping("/write")
+	public void write() {}
+	
+	@PostMapping("/write")
+	public ModelAndView write(BoardDTO input) {
+		ModelAndView mav = new ModelAndView();
+		String path = bs.writeBoard(input);
+		
+		mav.setViewName("redirect:/board/" + path);
 		return mav;
 	}
 }

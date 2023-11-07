@@ -15,4 +15,8 @@ public interface BoardDAO {
 
 	BoardDTO selectOne(int idx);
 
+	int insert(BoardDTO input);
+
+	int selectList();
+
 }

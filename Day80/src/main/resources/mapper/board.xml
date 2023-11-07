@@ -24,4 +24,17 @@
 	<insert id="testInsert">
 		insert into board(content) VALUES('1')
 	</insert>
+	
+	<insert id="insert"
+			parameterType="com.itbank.model.dto.BoardDTO">
+		insert into board(title, writer, content)
+			values(#{title}, #{writer}, #{content})		
+	</insert>
+	
+	<select id="selectList"
+			resultType="int">
+		select idx from board
+			order by idx desc
+			fetch first row only		
+	</select>
 </mapper>
