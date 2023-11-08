@@ -1,5 +1,7 @@
 package com.itbank.controller;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,34 +10,35 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.itbank.model.dto.ReplyDTO;
+import com.itbank.model.dto.BoardDTO;
 import com.itbank.service.BoardService;
-import com.itbank.service.ReplyService;
 
 @Controller
 @RequestMapping("/board")
 public class BoardController {
 	
 	@Autowired private BoardService bs;
-	@Autowired private ReplyService rs;
 	
 	@GetMapping("/view/{idx}")
 	public ModelAndView view(@PathVariable int idx) {
 		ModelAndView mav = new ModelAndView("board/view");
+		Map<String, Object> result = bs.getBoard(idx);
 		
-		mav.addObject("row", bs.getBoard(idx));
-		mav.addObject("rps", rs.getReply(idx));
+		mav.addObject("row", result.get("row"));
+		mav.addObject("rps", result.get("rps"));
 		
 		return mav;
 	}
+
+	@GetMapping("/write")
+	public void write() {}
 	
-	@PostMapping("/view/{idx}")
-	public ModelAndView reply(ReplyDTO input) {
-		ModelAndView mav = new ModelAndView("msg");
+	@PostMapping("/write")
+	public ModelAndView write(BoardDTO input) {
+		ModelAndView mav = new ModelAndView();
+		String path = bs.writeBoard(input);
 		
-		mav.addObject("row", rs.addReply(input));
-		mav.addObject("message", "댓글 작성 완료");
-		mav.addObject("location", "board/view");
+		mav.setViewName("redirect:/board/" + path);
 		
 		return mav;
 	}

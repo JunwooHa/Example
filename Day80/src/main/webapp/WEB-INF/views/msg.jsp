@@ -4,7 +4,7 @@
 	<script>
 		var row = ${row };
 		var msg = '${message }';
-		var cpath = '${cpath }';
+		var cpath = '${cpath }/';
 		var loc = '${location }';
 		
 		if (row != 0) {
