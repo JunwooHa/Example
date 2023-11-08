@@ -59,8 +59,15 @@ public class BoardService {
 		dao.testInsert();
 	}
 
-	public BoardDTO getBoard(int idx) {		
-		return dao.selectOne(idx);
+	@Transactional(readOnly = true)
+	public Map<String, Object> getBoard(int idx) {
+		
+		Map<String, Object> result = new HashMap<>();
+		
+		result.put("row", dao.selectOne(idx));
+		result.put("rps", dao.selectReply(idx));
+		
+		return result;
 	}
 
 	@Transactional

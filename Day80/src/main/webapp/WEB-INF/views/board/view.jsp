@@ -21,22 +21,13 @@
 	</table>		
 	
 	<article class="reply">
-		<form class="reply_write" method="POST">
-			<section>
-				<input name="board_idx" type="hidden" value="${row.idx }" required>
-				<input name="writer" type="hidden" value="katarina" required>
-			
-				<textarea name="contents" placeholder="바른 말을 사용합시다"></textarea>
-				<button>작성</button>
-			</section>
-		</form>
-	<c:forEach var="rp" items="${rps }">	
-		<p>
-		${rp.writer } (x)<br>
-		${rp.contents }<br>
-		${rp.write_date }<br>
-		</p><hr>
-	</c:forEach>	
+		<c:forEach var="rp" items="${rps }">	
+			<p>
+			${rp.writer } (x)<br>
+			${rp.contents }<br>
+			${rp.write_date }<br>
+			</p><hr>
+		</c:forEach>	
 	</article>
 	
 	

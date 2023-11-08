@@ -33,4 +33,18 @@ public class AccountController {
 		
 		return mav;
 	}
+
+	@GetMapping("/signUp")
+	public void signUp() {}
+	
+	@PostMapping("/signUp")
+	public ModelAndView signUp(AccountDTO input) {
+		ModelAndView mav = new ModelAndView("msg");
+		
+		mav.addObject("row", as.addAccount(input));
+		mav.addObject("message", "가입 완료");
+		mav.addObject("location", "");
+		
+		return mav;
+	}
 }

@@ -1,0 +1,69 @@
+@charset "UTF-8";
+body {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #CECEF6;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.all {
+	align-items: center;
+}
+.menu {
+	list-style: none;
+	display: flex;
+	padding: 0;	
+}
+.menu li {
+	margin: 0 10px;
+	background: linear-gradient(to right, #24c6dc, #514a9d);
+	border-radius: 10px;
+	padding: 10px;
+}
+.order {
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
+.order li {
+	margin: 0 10px;
+	border: 1px solid black;
+	padding: 5px 10px;
+}
+.board {
+	border-collapse: collapse;	
+	width: 65%;			
+}
+.board th {
+  background: #0099f7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0099f7, #f11712); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0099f7, #f11712);
+}
+.board tr:nth-child(2n) {
+	background: linear-gradient(to right, #e55d87, #5fc3e4);
+}
+.board tr:nth-child(2n - 1) {
+	background: linear-gradient(to right, #cc95c0, #dbd4b4, #7aa1d2);
+}
+.board th, .board td {
+	border: 1px solid black;
+	padding: 5px 10px;
+}
+.board textarea {
+	resize: none;
+	min-width:250px;
+	min-height: 250px;
+}
+.page {
+	display: flex;
+	list-style: none;		
+	margin: 10px auto;		
+}
+.page li {	
+	padding: 0 10px;
+}

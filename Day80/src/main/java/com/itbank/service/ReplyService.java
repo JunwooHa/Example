@@ -17,4 +17,8 @@ public class ReplyService {
 		return dao.selectAll(idx);
 	}
 
+	public int addReply(ReplyDTO input) {		
+		return dao.insert(input);
+	}
+
 }

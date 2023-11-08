@@ -27,7 +27,7 @@
 		
 		<br>
 		
-		<input name="writer" type="hidden" value="katarina">
+		<input name="writer" type="hidden" value="${user.nick }">
 		
 		<button>작성</button>
 	</section>

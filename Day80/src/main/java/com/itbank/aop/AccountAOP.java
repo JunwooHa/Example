@@ -21,7 +21,7 @@ public class AccountAOP {
 	public Object hash(ProceedingJoinPoint jp) throws Throwable {
 		// before
 		AccountDTO input = (AccountDTO) jp.getArgs()[0];
-		System.out.println("해시 전 : " + input.getUserpw());
+//		System.out.println("해시 전 : " + input.getUserpw());
 		
 		input.setUserpw(hash.getHash(input.getUserpw()));
 		
@@ -29,7 +29,7 @@ public class AccountAOP {
 		Object result = jp.proceed(jp.getArgs());		
 		
 		// after
-		System.out.println("해시 후 : " + input.getUserpw());
+//		System.out.println("해시 후 : " + input.getUserpw());
 		
 		return result;
 	}
