@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="${cpath }/resources/css/style.css">
 </head>
 <body>
-	<h1>${cpath } - Transection</h1>
+	<h1>${cpath } - Transaction</h1>
 	
 	<ul class="menu">
 		<li><a href="${cpath }">home</a></li>
