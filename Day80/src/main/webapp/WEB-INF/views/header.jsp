@@ -28,6 +28,9 @@
 				<li><a href="${cpath }/account/login">login</a></li>
 			</c:if>
 		</ul>
+		
+		<ul>
+		</ul>
 	</nav>
 	
 	<hr>
