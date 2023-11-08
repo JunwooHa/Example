@@ -17,4 +17,8 @@
 		<li><a href="${cpath }/board/write">write</a></li>
 	</ul>
 	
+	<ul>
+	
+	</ul>
+	
 	<hr>
