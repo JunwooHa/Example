@@ -12,9 +12,12 @@
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
+	<aop:aspectj-autoproxy />
+	<context:component-scan base-package="com.itbank.aop" />
 	
 	<context:component-scan base-package="com.itbank.service" />
 	<mybatis-spring:scan base-package="com.itbank.model"/>
+	<context:component-scan base-package="com.itbank.components" />
 	
 	<bean id="hc" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.itbank.model.dto.BoardDTO;
-import com.itbank.model.dto.ReplyDTO;
 import com.itbank.service.BoardService;
 import com.itbank.service.ReplyService;
 
@@ -29,15 +28,7 @@ public class BoardController {
 		
 		return mav;
 	}
-	
-	@PostMapping("/view/{idx}")
-	public ModelAndView reply(ReplyDTO input) {
-		ModelAndView mav = new ModelAndView("redirect:/board/view");
-		
-		
-		
-		return mav;
-	}
+
 	
 	@GetMapping("/write")
 	public void write() {}
