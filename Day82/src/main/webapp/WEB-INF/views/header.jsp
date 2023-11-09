@@ -15,6 +15,7 @@
 		<li><a href="${cpath }">home</a></li>
 		<li><a href="${cpath }/ex01">ex01</a></li>
 		<li><a href="${cpath }/ex02">ex02</a></li>
+		<li><a href="${cpath }/ex03">ex03</a></li>
 	</ul>
 	
 	<hr>

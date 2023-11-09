@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.itbank.model.dto.FileDTO;
 import com.itbank.service.FileService;
 
 @Controller
@@ -47,13 +48,25 @@ public class HomeController {
 	}
 	
 	@GetMapping("/ex02")
-	public void ex02() {}
+	public void ex02(Model model) throws IOException {
+		model.addAttribute("dir", fs.getDir());
+	}
 	
 	@PostMapping("/ex02")
-	public String ex02(MultipartFile upload, String name) {
-		System.out.println(upload.getName());
-		System.out.println(name);
+	public String ex02(MultipartFile upload, String name) throws IOException {
+		fs.fileUpload(upload, name);
 		
 		return "redirect:/ex01";
+	}
+	
+	@GetMapping("/ex03")
+	public void ex03() {}
+	
+	@PostMapping("/ex03")
+	public String ex03(FileDTO input) throws IOException {		
+		fs.fileUpload(input);
+		
+		
+		return "redirect:/ex03";
 	}
 }
