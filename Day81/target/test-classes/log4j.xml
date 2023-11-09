@@ -11,14 +11,14 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.itbank.Day80">
+	<logger name="com.itbank.Day81">
 		<level value="info" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
 		<level value="info" />
-	</logger>
+	</logger>	
 	
 	<logger name="org.springframework.beans">
 		<level value="info" />
@@ -34,23 +34,8 @@
 
 	<!-- Root Logger -->
 	<root>
-		<priority value="debug" />
+		<priority value="info" />
 		<appender-ref ref="console" />
 	</root>
-	
-	<!-- 
-		Log Level
-		1. Fatal 	: 매우 심각. 프로그램이 종료될 수준의 에러
-		2. Error 	: 심각. 의도치 않은 상황이 발생. 항상 종료되는 에러는 아님
-		3. Warn		: 경고. 에러가 될 잠재성이 있는 경우
-		4. Info		: 정보. 간단한 요구사항 확인시
-		5. Debug	: 디버깅. info보도 더 자세한 요구사항 확인시
-		6. Trace	: 추적. debug보다 더 자세한 요구사항 확인시
-		
-		log4j에서 로그 레벨을 지정하면 해당 로그 이상의 것만 로그로 남긴다
-		
-		<loger>와 <root> 중 <logger>가 더 우선순위가 높다
-		<root>는 지정하지 않은 패키지에서 발생하는 로그 레벨을 지정한다
-	 -->
 	
 </log4j:configuration>
