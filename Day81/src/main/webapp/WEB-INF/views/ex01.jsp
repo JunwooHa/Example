@@ -10,6 +10,8 @@
 	<h1>Logging Framework</h1>
 	<hr>
 	
+	<h4>${ver }</h4>
+	
 	<ul>
 		<li>slf4j : 실제 로그 FW는 아님. 다양한 로그 FW를 지원하게 하는 인터페이스 역할</li>
 		<li>log4j : 로그 FW 중 하나. Spring 프로젝트의 기본 FW. 버전2가 있다</li>

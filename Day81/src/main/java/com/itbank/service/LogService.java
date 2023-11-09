@@ -11,7 +11,7 @@ public class LogService {
 	@Autowired private LogDAO dao;
 	
 	public String getVersion() {
-		return dao.test();
+		return dao.getBanner();
 	}
 
 }

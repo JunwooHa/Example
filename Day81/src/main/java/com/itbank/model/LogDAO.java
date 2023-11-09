@@ -5,6 +5,6 @@ import org.apache.ibatis.annotations.Select;
 public interface LogDAO {
 
 	@Select("select banner from v$version")
-	String test();
+	String getBanner();
 
 }

@@ -18,7 +18,7 @@ public class HomeController {
 	@Autowired private LogService ls;
 	
 	@GetMapping("/")
-	public String home(Model model) {
+	public String home() {
 		
 		log.error("로그 : Error");
 		log.warn("로그 : Warning");
@@ -26,14 +26,13 @@ public class HomeController {
 		log.debug("로그 : Debug");
 		log.trace("로그 : Trace");
 		
-		model.addAttribute("ver", ls.getVersion());
 		
 		return "home";
 	}
 	
 	@GetMapping("/ex01")
-	public String test() {
-		log.trace("실행완료");
-		return "ex01";
+	public void test(Model model) {
+		model.addAttribute("ver", ls.getVersion());
+		log.trace("실행완료");		
 	}
 }
