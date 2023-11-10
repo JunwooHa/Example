@@ -2,6 +2,47 @@
     pageEncoding="UTF-8"%>
 <%@ include file="header.jsp" %>
 
+	<h4>파일 목록</h4>
+	
+	<table class="upload">
+		<tr>
+			<th>No.</th>
+			<th>파일명</th>
+			<th>경로</th>
+			<th>업로더</th>
+			<th>메모</th>
+			<th>업로드일</th>
+			<th>수정</th>
+			<th>삭제</th>
+		</tr>
+		
+		<c:forEach var="row" items="${dir }">		
+			<tr>
+				<td>${row.idx }</td>
+				<td>
+					<a href="${cpath }/files/${row.name }" download>					
+						${row.name }
+					</a>
+				</td>
+				<td>${row.path }</td>
+				<td>${row.uploader }</td>
+				<td>${row.memo }</td>
+				<td>${row.upload_date }</td>
+				<td>
+					<a href="${cpath }/update/${row.idx }">					
+						클릭
+					</a>
+				</td>
+				<td>
+					<a href="${cpath }/delete?name=${row.name }">					
+						클릭
+					</a>
+				</td>
+			</tr>
+		</c:forEach>
+	</table>
+
+	<hr>
 	<h4>업로드</h4>
 	
 	<form method="POST" enctype="multipart/form-data">
