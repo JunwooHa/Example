@@ -11,6 +11,22 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+.menu {
+	display: flex;
+	justify-content: space-between;
+}
+.menu ul{
+	list-style: none;
+	padding: 0;
+	display: flex;
+}
+.menu li {
+	margin: 0 10px;
+	background: linear-gradient(to right, #24c6dc, #514a9d);
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+}
 .board table{
 	border-collapse: collapse;
 	width: 80%;

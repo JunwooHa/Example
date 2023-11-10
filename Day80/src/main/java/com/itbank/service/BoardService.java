@@ -42,8 +42,6 @@ public class BoardService {
 		
 		return result;
 	}
-
-	
 	
 	// 구문이 없을 땐 구문 하나하나가 트랜잭션이라서 3개는 되고 2개는 예외가 터져 안 들어가짐
 	// 이 구문 전체를 트랜잭션으로 만들어서 하나만 예외 터지면 전부 안들어감
@@ -61,11 +59,29 @@ public class BoardService {
 		dao.testInsert();
 	}
 
+	@Transactional(readOnly = true)
+	public Map<String, Object> getBoard(int idx) {
+		
+		Map<String, Object> result = new HashMap<>();
+		
+		result.put("row", dao.selectOne(idx));
+		result.put("rps", dao.selectReply(idx));
+		
+		return result;
+	}
 
-
-	
-	public BoardDTO getBoard(int idx) {		
-		return dao.selectOne(idx);
+	@Transactional
+	public String writeBoard(BoardDTO input) {
+		int row = dao.insert(input);
+		String path = "";
+		
+		if (row != 0) {
+			int idx = dao.selectList();
+			System.out.println("idx = " + idx);
+			
+			path += "view/" + idx;
+		}
+		return path;
 	}
 
 }
