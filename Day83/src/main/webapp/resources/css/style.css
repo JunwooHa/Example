@@ -18,16 +18,15 @@ a:hover {
 .menu li {
 	margin: 0 10px;
 }
-.board table{
-	border-collapse: collapse;
-	margin: 0 auto;
-	width: 80%;
+.board {
+	display: flex;
+	width: 950px;
+	flex-wrap: wrap;
+	justify-content: space-between;	
+  	background: linear-gradient(45deg, #0099f7, #f11712);
 }
-.board th, .board td {
+.board > div {
+	margin: 10px 5px;
 	border: 1px solid black;
-	padding: 5px 10px;
-}
-.board textarea {
-	width: 80%;
-	min-height: 250px;
+	padding: 3px;	
 }
