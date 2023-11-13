@@ -4,9 +4,11 @@
 <section class="board">
 	<c:forEach var="row" items="${list }">
 		<div>
-			<img src="${cpath }/img/${row.img}" width="170px" height="150px">
-			<hr>
-			${row.idx }<br> ${row.title } (${row.writer })
+			<a href="${cpath }/board/view/${row.idx }">
+				<img src="${cpath }/img/${row.idx }/${row.img}" width="200px" height="150px">
+			</a>
+			<hr>			
+			${row.title } (${row.writer })
 			<hr>
 			👍${row.view_count } ${row.write_date }
 		</div>

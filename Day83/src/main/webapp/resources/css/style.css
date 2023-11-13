@@ -30,3 +30,10 @@ a:hover {
 	border: 1px solid black;
 	padding: 3px;	
 }
+.boards {
+	border-collapse: collapse;
+}
+.boards th,.boards td {
+	border: 1px solid black;
+	padding: 5px 10px;
+}
