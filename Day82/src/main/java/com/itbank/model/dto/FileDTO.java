@@ -17,7 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileDTO {
 	private int idx;
 	private String name, path, uploader, memo;
-	private Date date;
+	private Date upload_date;
 	
 	private MultipartFile upload;
 	
@@ -51,11 +51,11 @@ public class FileDTO {
 	public void setMemo(String memo) {
 		this.memo = memo;
 	}
-	public Date getDate() {
-		return date;
+	public Date getUpload_date() {
+		return upload_date;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setUpload_date(Date upload_date) {
+		this.upload_date = upload_date;
 	}
 	public MultipartFile getUpload() {
 		return upload;

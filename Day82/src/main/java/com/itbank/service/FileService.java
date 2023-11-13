@@ -2,11 +2,13 @@ package com.itbank.service;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.itbank.model.FileDAO;
@@ -56,14 +58,49 @@ public class FileService {
 	}
 
 	public void fileUpload(FileDTO input) throws IOException {
-		MultipartFile file = input.getUpload();
+		MultipartFile file = input.getUpload();		
 		
-		System.out.println(rs.getFilename());
+		// 1. DB에 전달할 값을 분할
+		input.setPath(rs.getFile().toString());
+		input.setName(file.getOriginalFilename());
 		
-//		input.setPath(rs.getFilename());
-//		input.setName(file.getOriginalFilename());
+		// 2. 실제 위치에 업로드 진행
+		File dest = new File(rs.getFile(), file.getOriginalFilename());
+		file.transferTo(dest);
 		
-//		dao.insert(input);
+		// 3. DB 정보 등록
+		dao.insert(input);
+	}
+
+	@Transactional(readOnly = true)
+	public List<FileDTO> getFiles() {		
+		return dao.selectAll();
+	}
+
+	public int deleteFile(FileDTO input) throws IOException {
+		File file = new File(rs.getFile(), input.getName());
+		
+		if (file.exists()) {
+			file.delete();
+		}
+		
+		return dao.delete(input);
+	}
+
+	public FileDTO getFile(int idx) {
+		return dao.selectOne(idx);
+	}
+
+	public int updateFile(FileDTO input) throws IOException {
+		// 원본, 대상
+		FileDTO file = dao.selectOne(input.getIdx());
+		
+		File src = new File(rs.getFile(), file.getName());
+		File dst = new File(rs.getFile(), input.getName());
+		
+		src.renameTo(dst);
+		
+		return dao.update(input);
 	}
 
 }
