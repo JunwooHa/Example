@@ -30,11 +30,7 @@ public class BoardService {
 	}
 
 	public int updateBoard(BoardDTO input) {		
-		int row = dao.update(input);
-		
-		System.out.println(row);
-		
-		return 0;
+		return dao.update(input);
 	}
 	
 	
