@@ -10,7 +10,7 @@
 			</tr>
 			<tr>
 				<th>작성자</th>
-				<td>${row.writer }</td>
+				<td><input name="writer" value="${row.writer }" required></td>
 			</tr>								
 			<tr>
 				<td colspan="2"><textarea name="contents">${row.contents }</textarea></td>
