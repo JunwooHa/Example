@@ -46,12 +46,12 @@ public class BookController {
 	}
 	
 	@PatchMapping
-	public int updateBookPrice(BookDTO input) {
+	public int updateBookPrice(@RequestBody BookDTO input) {
 		return bs.updatePrice(input);
 	}
 	
-	@DeleteMapping
-	public int deleteBook(int idx) {				
-		return bs.deleteBook(idx);
+	@DeleteMapping("/{idx}")
+	public int deleteBook(@PathVariable int idx) {							
+		return bs.deleteBook(idx);		
 	}
 }

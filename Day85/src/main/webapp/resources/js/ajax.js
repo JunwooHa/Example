@@ -58,7 +58,7 @@ var json;
 		// 3. PUT 버튼 클릭
 		btns[2].onclick= () => {
 			let data = {
-				idx: 1022,
+				idx: 1027,
 				title: 'ajax 수정',
 				writer: 'test',
 				publisher: 'CSS',
@@ -79,3 +79,37 @@ var json;
 				}
 			})
 		}
+
+		// 4. Patch 버튼 클릭
+		btns[3].onclick= () => {
+			let data = {
+				idx: 1022,
+				price: 15000
+			};
+			fetch(url, {
+				method : 'PATCH' ,
+				headers: {
+					'Content-type' : 'application/json'
+				},
+				body:  JSON.stringify(data)
+			})
+			.then(response => response.json())
+			.then(data => {
+				if (data != 0) {
+					btns[0].click();
+				}
+			})
+		}
+
+		// 5. DELETE 버튼 클릭
+		btns[4].onclick= () => {			
+
+			fetch(url + '/1022', { method : 'delete' })
+			.then(response => response.json())
+			.then(data => {
+				if (data != 0) {
+					btns[0].click();
+				}
+			})
+		}
+		
