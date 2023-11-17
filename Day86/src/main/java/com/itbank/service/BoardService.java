@@ -1,10 +1,13 @@
 package com.itbank.service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.itbank.component.Paging;
 import com.itbank.model.BoardDAO;
 import com.itbank.model.dto.BoardDTO;
 
@@ -13,10 +16,17 @@ public class BoardService {
 
 	@Autowired private BoardDAO dao;
 	
-	public List<BoardDTO> getBoards(int reqPage) {		
-		// 페이징 코드
+	public Map<String, Object> getBoards(int reqPage) {		
+		Paging p = new Paging(reqPage, dao.getTotalBoard());
 		
-		return dao.selectAll();
+		List<BoardDTO> list = dao.selectAll(p);
+		
+		Map<String, Object> result = new HashMap<>();
+		
+		result.put("list", list);
+		result.put("p", p);
+		
+		return result;
 	}
 
 	public BoardDTO getBoard(int idx) {		

@@ -1,8 +1,9 @@
 package com.itbank.controller;
 
-import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -21,10 +22,12 @@ import com.itbank.service.BoardService;
 public class QuizController {
 
 	@Autowired private BoardService bs;
-	
+		
 	@GetMapping
-	public List<BoardDTO> getBoards(int reqPage) {				
-		return bs.getBoards(reqPage);
+	public Map<String, Object> getBoards(Model model, int reqPage) {				
+		Map<String, Object> map = bs.getBoards(reqPage);
+				
+		return map;
 	}
 	
 	@GetMapping("/{idx}")

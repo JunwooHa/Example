@@ -2,36 +2,60 @@ function list(reqPage) {
     fetch(url + `?reqPage=${reqPage}`, {method: 'get'})
     .then(response => response.json())
     .then(data => {
-        json = data;
-        let tr;
-
-        boards.innerHTML = ''
-
-        for (let i = 0; i < data.length; i++) {
-            tr = document.createElement('tr');
-
-            tr.innerHTML = 
-                '<td>' + data[i].idx + '</td>' +
-                `<td data-idx="${data[i].idx}">` + data[i].title + '</td>' +
-                '<td>' + data[i].writer + '</td>' +
-                '<td>' + data[i].view_count + '</td>' +
-                '<td>' + data[i].write_date + '</td>';
-
-            boards.appendChild(tr);                        
+    	dt = data;
+		
+		let list = data.list;
+		let p = data.p;
+	
+		let result = document.querySelectorAll('.books > tbody')[0];
+		result.innerHTML = '';
+		
+		// 게시글
+		for (let i = 0; i < p.perCount; i++) {
+			let tr = document.createElement('tr');
+			
+			tr.innerHTML = 
+				'<td>' + list[i].idx + '</td>' + 
+				`<td data-idx="${list[i].idx}">` + list[i].title + '</td>' + 
+				'<td>' + list[i].writer + '</td>' + 
+				'<td>' + list[i].view_count + '</td>' + 
+				'<td>' + list[i].write_date + '</td>'; 
+				
+			result.appendChild(tr);
+		}      
+        
+        // 페이지 번호
+        let page = document.querySelectorAll('.page')[0];
+        page.innerHTML = '';
+        
+        if (p.prev)
+        	page.appendChild(getLi('이전', p.begin - 1));
+        
+        for (let i = p.begin; i <= p.end; i++) {
+        	page.appendChild(getLi(i, i));						
         }
-    })
+        
+        if (p.next)
+        	page.appendChild(getLi('다음', p.end + 1));   
+    });
 }  
 
+function getLi(data, page) {
+	let li = document.createElement('li');
+	li.innerHTML = data;
+	li.setAttribute('data-i', page);
+	
+	return li;
+}
 let btns = document.querySelectorAll('.btns > button');
-let boards = document.querySelectorAll('.books > tbody')[0];
 const url = 'board';
-var json;
+var dt;
 
 		// 0. 페이지 접근 시 바로 출력
 		list(1);
 
         // 1. GET
-        btns[0].onclick = () => list(2);    
+        btns[0].onclick = () => list(1);    
         
         // 2.POST
         btns[1].onclick = () => {
@@ -150,12 +174,15 @@ var json;
          }
          
          // 페이징
-         let page = document.querySelectorAll('.page')[0];        
+         let page = document.querySelectorAll('.page')[0];
+         var test;
          
          page.onclick = (event) => { 
         	 let tar = event.target;
+//        	 test = tar;
         	 
-        	 if (tar.tagName == 'LI') {        		 
-        		 alert(tar.tagName + ' : ' + tar.innerHTML);
+        	 if (tar.tagName == 'LI') {
+//        		 alert(tar.tagName + ' : ' + tar.getAttribute('data-i'))
+        		 list(tar.getAttribute('data-i'));
         	 }
          }

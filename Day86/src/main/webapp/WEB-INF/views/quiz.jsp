@@ -20,10 +20,14 @@
     </table>
     
     <ul class="page">
+    	<%-- <li data-i="${11 - 1 }">이전</li>
+    
     	<c:forEach var="i" begin="1" end="10">
-    		<li>${i }</li>
+    		<li data-i="${i }">${i }</li>
     	</c:forEach>
-    </ul>
+    	
+    	<li data-i="${10 + 1 }">다음</li> --%>
+    </ul> 
 
     <p class="btns">
 		<button>GET</button>

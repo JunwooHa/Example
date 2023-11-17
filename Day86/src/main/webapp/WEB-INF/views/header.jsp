@@ -16,6 +16,7 @@
 		<li><a href="${cpath }">home</a></li>
 		<li><a href="${cpath }/ajax">ajax</a></li>
 		<li><a href="${cpath }/quiz">quiz</a></li>
+		<li><a href="${cpath }/quiz2">quiz2</a></li>
 	</ul>
 	
 	<hr>

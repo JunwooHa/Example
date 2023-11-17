@@ -2,11 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.itbank.model.BoardDAO">
 	<select id="selectAll"
-			resultType="com.itbank.model.dto.BoardDTO">
+			resultType="com.itbank.model.dto.BoardDTO"
+			parameterType="com.itbank.component.Paging">
 		select * from board
 			order by idx desc
-			offset 0 rows
-			fetch first 10 rows only	
+			offset #{offset} rows
+			fetch first #{perCount} rows only	
 	</select>
 	
 	<select id="selectOne"
@@ -44,4 +45,9 @@
 			parameterType="com.itbank.model.dto.BoardDTO">
 		delete from board where idx = #{idx}
 	</delete>
+	
+	<select id="getTotalBoard"
+			resultType="int">
+		select count(*) from board		
+	</select>
 </mapper>
