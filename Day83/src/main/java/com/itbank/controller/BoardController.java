@@ -1,5 +1,7 @@
 package com.itbank.controller;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +23,7 @@ public class BoardController {
 	public void write() {}
 	
 	@PostMapping("/write")
-	public ModelAndView write(BoardDTO input) {
+	public ModelAndView write(BoardDTO input) throws IOException {
 		ModelAndView mav = new ModelAndView("redirect:/");
 		
 		bs.addBoard(input);
@@ -39,7 +41,7 @@ public class BoardController {
 	}
 
 	@GetMapping("/delete/{idx}")
-	public ModelAndView delete(@PathVariable int idx) {
+	public ModelAndView delete(@PathVariable int idx) throws Exception {
 		ModelAndView mav = new ModelAndView("msg");
 		
 		mav.addObject("row", bs.deleteBoard(idx));
@@ -50,7 +52,7 @@ public class BoardController {
 	
 	@GetMapping("/update/{idx}")
 	public ModelAndView update(@PathVariable int idx) {
-		ModelAndView mav = new ModelAndView("board/update");
+		ModelAndView mav = new ModelAndView("board/write");
 		
 		mav.addObject("row", bs.getBoard(idx));
 		
@@ -58,11 +60,12 @@ public class BoardController {
 	}
 	
 	@PostMapping("/update/{idx}")
-	public ModelAndView update(BoardDTO input) {
+	public ModelAndView update(BoardDTO input) throws IOException {
 		ModelAndView mav = new ModelAndView("msg");
 		
 		mav.addObject("row", bs.updateBoard(input));
 		mav.addObject("message", "수정 완료");
+		mav.addObject("location", "board/view/" + input.getIdx());
 		
 		return mav;
 	}

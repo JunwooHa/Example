@@ -2,6 +2,8 @@ package com.itbank.model.dto;
 
 import java.sql.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 /*
  	IDX        NOT NULL NUMBER        
 	TITLE      NOT NULL VARCHAR2(200) 
@@ -15,6 +17,7 @@ public class BoardDTO {
 	private int idx, view_count;
 	private String title, contents, writer, img;
 	private Date write_date;
+	private MultipartFile upload;
 	
 	public int getIdx() {
 		return idx;
@@ -57,5 +60,11 @@ public class BoardDTO {
 	}
 	public void setWrite_date(Date write_date) {
 		this.write_date = write_date;
+	}
+	public MultipartFile getUpload() {
+		return upload;
+	}
+	public void setUpload(MultipartFile upload) {
+		this.upload = upload;
 	}	
 }
