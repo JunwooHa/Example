@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itbank.model.BoardDAO">
+
+	<select id="selectAll" 
+			resultType="com.itbank.model.vo.BoardVO"
+			parameterType="com.itbank.conponents.Paging">
+		
+		select * from board 
+		    order by idx desc
+		    offset #{offset} row
+		    fetch first #{perCount} rows only
+	</select>
+	
+	<select id="selectOne" 
+			resultType="com.itbank.model.vo.BoardVO"
+			parameterType="int">
+	
+		select * from board
+			where idx = #{idx}
+	</select>
+	
+	<insert id="insertBoard"
+			parameterType="com.itbank.model.vo.BoardVO">
+	
+		insert into
+			board(title, writer, contents)
+			values(#{title}, #{writer}, #{contents})
+	</insert>
+
+	<update id="updateBoard"
+			parameterType="com.itbank.model.vo.BoardVO">
+		
+		update board
+			set
+				title = #{title},
+				writer = #{writer},
+				contents = #{contents}
+			where idx = #{idx}
+	</update>
+	
+	<update id="viewUpdate"
+			parameterType="com.itbank.model.vo.BoardVO">
+			
+		update board
+			set view_count = view_count + 1
+			where idx = #{idx}
+		
+	</update>
+</mapper>
