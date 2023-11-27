@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;book.xml&apos; to &apos;mapper&apos;" description="Move &apos;book.xml&apos; to &apos;mapper&apos;" destination="src/main/resources/mapper" element1="src/main/resources/book.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1699921786143" updateReferences="true"/>
+</session>

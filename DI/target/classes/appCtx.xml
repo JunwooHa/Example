@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="b1" class="beans.Battery"></bean>
+	
+	<bean id="toy" class="beans.Toy">
+		<property name="bat" ref="b1" />
+		<!-- toy의 bat 필드에 b1이라는 Battery 객체를 주입 -->		
+	</bean>
+	
+	<!-- 
+		Spring Bean
+		- 스프링이 관리하는 객체를 의미한다
+		- java에서 사용하고 객체가 맞고 단지 '스프링이 관리'한다는 점만 다르다
+		- 빈은 Spring Container에 생성되고 보관된다
+		- 보통 singleton으로 관리가 되고 변경할 수 있다
+		- 의존성 주입(DI)이 구현되어 있어 의존성 문제를 쉽게 처리 가능
+	 -->
+	
+</beans>

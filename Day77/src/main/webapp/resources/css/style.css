@@ -1,0 +1,68 @@
+@charset "UTF-8";
+body {
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #CECEF6;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.menu {
+	display: flex;
+	justify-content: space-between;
+}
+.menu > ul >.debug {
+	color: red;
+	background: linear-gradient(to right, #24c6dc, #514a9d);
+}
+.menu ul{
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
+.menu > ul > li {
+	margin: 0 10px;
+	background: linear-gradient(to right, #24c6dc, #514a9d);
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+}
+.debug1 {
+	color: red;
+}
+.boards {
+	border-collapse: collapse;
+}
+.boards tr:nth-child(2n) {
+	background: linear-gradient(to right, #e55d87, #5fc3e4);
+}
+.boards tr:nth-child(2n - 1) {
+	background: linear-gradient(to right, #cc95c0, #dbd4b4, #7aa1d2);
+}
+.boards th {
+  background: #0099f7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0099f7, #f11712); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0099f7, #f11712);
+}
+.boards th, .boards td {
+	border: 1px solid black;
+	padding: 5px 10px;
+}
+.login {
+	border: 1px solid black;
+	display: inline-block;
+	padding: 5px 10px;
+	justify-content: center;
+}
+.signUp {
+	border: 1px solid black;
+	display: inline-block;
+	padding: 5px 10px;
+}
+.find {
+	display: inline-block;	
+}
