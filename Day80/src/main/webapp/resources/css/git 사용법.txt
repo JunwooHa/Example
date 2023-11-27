@@ -1,0 +1,19 @@
+git 사용법
+
+1.초기 git 설정
+- 1.상단의 windows - show view - other로 들어가서 git을 치고 git repository를 선택한다
+- 2.import project git을 누르고 프로젝트를 만든 사람의 url을 넣는다 (이건 총괄자가 나눠주는걸로)
+- 3.그 밑에 ID/PW는 자신의 git ID으로 하고 비밀번호는 토큰으로 해야함
+- 4.토큰 만드는 법은 오른쪽 상단의 프로필 사진을 누르고 settings에 들어간다
+- 5.내려가다 보면 왼쪽에 Developer settings가 있는데 이걸 누른다
+- 6.github apps에서 personal access tokens가 있는데 token(classic)을 선택한다
+- 7.generate new token을 누르고 classic을 선택
+- 8.이름은 아무렇게나 하고 기간도 자신의 마음대로 하지만 가능한 기한 없는걸로....
+- 9.select scope에서는 repo 빼고 다 체크 그리고 create 한다 
+    그러면 토큰이 뜨는데 이걸 비밀번호에 넣어야한다
+
+
+
+예외 사항 : 
+git으로 전환하면 deployelement descriptor와 spring elements가 없어지는 걸 확인할 수 있게
+되는데 그럴 땐 오른쪽 상단의 java ee tool을 누르면 다시 볼 수 있다
