@@ -13,4 +13,7 @@ public class HomeController {
 	
 	@GetMapping("/ajax")
 	public void ajax() {}
+	
+	@GetMapping("/quiz")
+	public void quiz() {}
 }
