@@ -1,0 +1,32 @@
+@charset "UTF-8";
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.menu {
+	list-style: none;
+	display: flex;
+	padding: 0;
+}
+.menu li {
+	margin: 0 10px;
+	width: 100px;
+	padding: 10px;
+	text-align: center;
+	border: 3px double black;
+	color: black;
+}
+.menu > li:hover {
+	background-color: #eeeeee;
+	color: white;
+}
+.books {
+	border-collapse: collapse;
+}
+.books th,.books td {
+	border: 1px solid black;
+	padding: 5px 10px;
+}

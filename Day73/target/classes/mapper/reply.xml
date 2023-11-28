@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itbank.model.ReplyDao">
+
+	<select id="selectAll"
+			parameterType="int"
+			resultType="com.itbank.model.vo.ReplyVO">
+			
+		select * from reply 
+			where board_idx = #{idx} 
+			order by idx desc
+	</select>
+	
+	<insert id="insert"
+			parameterType="com.itbank.model.vo.ReplyVO">
+		
+		insert into
+			reply(board_idx, writer, contents)
+			values(#{board_idx}, #{writer}, #{contents})
+	</insert>
+</mapper>

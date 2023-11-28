@@ -1,0 +1,136 @@
+
+11월 14, 2023 09:12:19.25 NEW SESSION
+11월 14, 2023 09:12:19.25 [20424:20740:1114/091219.256:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 14, 2023 09:12:19.25 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 14, 2023 09:12:19.25 ERROR: Failed parsing Certificate
+11월 14, 2023 09:12:19.26 
+11월 14, 2023 09:14:08.44 [20424:20740:1114/091408.440:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 14, 2023 09:14:08.44 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 14, 2023 09:14:08.44 ERROR: Failed parsing Certificate
+11월 14, 2023 09:14:08.44 
+11월 14, 2023 10:14:20.45 [20424:20740:1114/101420.458:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 14, 2023 10:14:20.45 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 14, 2023 10:14:20.45 ERROR: Failed parsing Certificate
+11월 14, 2023 10:14:20.46 
+11월 14, 2023 11:12:19.22 [20424:20740:1114/111219.223:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 14, 2023 11:12:19.22 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 14, 2023 11:12:19.22 ERROR: Failed parsing Certificate
+11월 14, 2023 11:12:19.22 
+11월 14, 2023 11:16:12.15 [20424:20740:1114/111612.151:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 14, 2023 11:16:12.15 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 14, 2023 11:16:12.15 ERROR: Failed parsing Certificate
+11월 14, 2023 11:16:12.15 
+11월 14, 2023 11:43:40.39 [20424:23868:1114/114340.394:ERROR:CONSOLE(0)] "Blocked script execution in 'data:text/html;charset=UTF-8,%0D%0A%0D%0A%0D%0A%0D%0A%3C!DOCTYPE%20html%3E%0D%0A%3Chtml%3E%0D%0A%3Chead%3E%0D%0A%3Cmeta%20charset=%22UTF-8%22%3E%0D%0A%3Ctitle%3EInsert%20title%20here%3C/title%3E%0D%0A%3C/head%3E%0D%0A%3Cbody%3E%0D%0A%09%3Ch1%3ERESTFul%3C/h1%3E%0D%0A%09%0D%0A%09%3Cul%3E%0D%0A%09%09%3Cli%3E%3Ca%20href=%22/Day85%22%3Ehome%3C/a%3E%3C/li%3E%0D%0A%09%09%3Cli%3E%3Ca%20href=%22/Day85/ajax%22%3Eajax%3C/a%3E%3C/li%3E%0D%0A%09%3C/ul%3E%0D%0A%09%0D%0A%09%3Chr%3E%0D%0A%3Csection%3E%0D%0A%09%3Ch4%3Efetc...CH%3C/button%3E%0D%0A%09%09%3Cbutton%3EDELETE%3C/button%3E%0D%0A%09%3C/p%3E%0D%0A%09%0D%0A%09%3Cscript%3E%0D%0A%09%09let%20btns%20=%20document.querySelectorAll('.btns%20%3E%20button')%0D%0A%09%09const%20url%20=%20'book';%0D%0A%09%09//%201.%20GET%20%0D%0A%09%09btns%5B0%5D.onclick%20=%20()%20=%3E%20%7B%0D%0A%09%09%09fetch(url,%20%7Bmethod:%20'get'%7D)%0D%0A%09%09%09.then(response%20=%3E%20console.log(response));%0D%0A%09%09%7D%0D%0A%09%3C/script%3E%0D%0A%3C/section%3E%0D%0A%0D%0A%3C/body%3E%0D%0A%3C/html%3E' because the document's frame is sandboxed and the 'allow-scripts' permission is not set.", source: data:text/html;charset=UTF-8,%0D%0A%0D%0A%0D%0A%0D%0A%3C!DOCTYPE%20html%3E%0D%0A%3Chtml%3E%0D%0A%3Chead%3E%0D%0A%3Cmeta%20charset=%22UTF-8%22%3E%0D%0A%3Ctitle%3EInsert%20title%20here%3C/title%3E%0D%0A%3C/head%3E%0D%0A%3Cbody%3E%0D%0A%09%3Ch1%3ERESTFul%3C/h1%3E%0D%0A%09%0D%0A%09%3Cul%3E%0D%0A%09%09%3Cli%3E%3Ca%20href=%22/Day85%22%3Ehome%3C/a%3E%3C/li%3E%0D%0A%09%09%3Cli%3E%3Ca%20href=%22/Day85/ajax%22%3Eajax%3C/a%3E%3C/li%3E%0D%0A%09%3C/ul%3E%0D%0A%09%0D%0A%09%3Chr%3E%0D%0A%3Csection%3E%0D%0A%09%3Ch4%3Efetch%EB%A5%BC%20%ED%99%9C%EC%9A%A9%ED%95%9C%20RESTFul%20API%20%EC%88%98%EC%A0%95%3C/h4%3E%0D%0A%09%0D%0A%09%3Cul%3E%0D%0A%09%09%3Cli%3Efetch%EB%8A%94%20%EB%8B%A4%EC%96%91%ED%95%9C%20HTTP%20%EC%9A%94%EC%B2%AD%20%EB%A9%94%EC%84%9C%EB%93%9C%EB%A5%BC%20%EC%82%AC%EC%9A%A9%20%EA%B0%80%EB%8A%A5%ED%95%98%EB%A9%B0%3C/li%3E%0D%0A%09%09%3Cli%3E%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9C%BC%EB%A1%9C%20%EB%B9%84%EB%8F%99%EA%B8%B0%20%ED%86%B5%EC%8B%A0%EC%9C%BC%EB%A1%9C%20%EC%82%AC%EC%9A%A9%EB%90%9C%EB%8B%A4%3C/li%3E%0D%0A%09%3C/ul%3E%0D%0A%09%0D%0A%09%3Cp%20class=%22btns%22%3E%0D%0A%09%09%3Cbutton%3EGET%3C/button%3E%0D%0A%09%09%3Cbutton%3EPOST%3C/button%3E%0D%0A%09%09%3Cbutton%3EPUT%3C/button%3E%0D%0A%09%09%3Cbutton%3EPATCH%3C/button%3E%0D%0A%09%09%3Cbutton%3EDELETE%3C/button%3E%0D%0A%09%3C/p%3E%0D%0A%09%0D%0A%09%3Cscript%3E%0D%0A%09%09let%20btns%20=%20document.querySelectorAll('.btns%20%3E%20button')%0D%0A%09%09const%20url%20=%20'book';%0D%0A%09%09//%201.%20GET%20%0D%0A%09%09btns%5B0%5D.onclick%20=%20()%20=%3E%20%7B%0D%0A%09%09%09fetch(url,%20%7Bmethod:%20'get'%7D)%0D%0A%09%09%09.then(response%20=%3E%20console.log(response));%0D%0A%09%09%7D%0D%0A%09%3C/script%3E%0D%0A%3C/section%3E%0D%0A%0D%0A%3C/body%3E%0D%0A%3C/html%3E (0)
+11월 14, 2023 12:12:17.63 [20424:20740:1114/121217.630:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 14, 2023 12:12:17.63 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 14, 2023 12:12:17.63 ERROR: Failed parsing Certificate
+11월 14, 2023 12:12:17.63 
+11월 14, 2023 12:40:12.77 [20424:20740:1114/124012.777:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 14, 2023 12:40:12.77 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 14, 2023 12:40:12.77 ERROR: Failed parsing Certificate
+11월 14, 2023 12:40:12.77 
+11월 14, 2023 13:12:17.53 [20424:20740:1114/131217.532:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 14, 2023 13:12:17.53 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 14, 2023 13:12:17.53 ERROR: Failed parsing Certificate
+11월 14, 2023 13:12:17.53 
+11월 14, 2023 13:41:38.09 [20424:20740:1114/134138.093:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 14, 2023 13:41:38.09 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 14, 2023 13:41:38.09 ERROR: Failed parsing Certificate
+11월 14, 2023 13:41:38.09 
+11월 14, 2023 14:12:17.63 [20424:20740:1114/141217.637:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 14, 2023 14:12:17.63 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 14, 2023 14:12:17.63 ERROR: Failed parsing Certificate
+11월 14, 2023 14:12:17.63 
+
+11월 16, 2023 09:21:41.33 NEW SESSION
+11월 16, 2023 09:21:41.33 [16436:9724:1116/092141.120:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 09:21:41.53 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 09:21:41.53 ERROR: Failed parsing Certificate
+11월 16, 2023 09:21:41.53 
+11월 16, 2023 09:22:26.15 [16436:9724:1116/092226.151:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 09:22:26.15 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 09:22:26.15 ERROR: Failed parsing Certificate
+11월 16, 2023 09:22:26.15 
+11월 16, 2023 10:21:41.11 [16436:9724:1116/102141.113:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 10:21:41.11 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 10:21:41.11 ERROR: Failed parsing Certificate
+11월 16, 2023 10:21:41.11 
+11월 16, 2023 10:23:33.30 [16436:9724:1116/102333.299:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 10:23:33.30 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 10:23:33.30 ERROR: Failed parsing Certificate
+11월 16, 2023 10:23:33.30 
+11월 16, 2023 11:21:41.12 [16436:17224:1116/112141.120:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 11:21:41.12 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 11:21:41.12 ERROR: Failed parsing Certificate
+11월 16, 2023 11:21:41.12 
+11월 16, 2023 11:28:55.76 [16436:9724:1116/112855.765:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 11:28:55.76 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 11:28:55.76 ERROR: Failed parsing Certificate
+11월 16, 2023 11:28:55.76 
+11월 16, 2023 12:20:05.82 [16436:9724:1116/122005.822:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 12:20:05.82 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 12:20:05.82 ERROR: Failed parsing Certificate
+11월 16, 2023 12:20:05.82 
+11월 16, 2023 12:20:05.83 [16436:9724:1116/122005.833:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 12:20:05.83 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 12:20:05.83 ERROR: Failed parsing Certificate
+11월 16, 2023 12:20:05.83 
+11월 16, 2023 12:20:05.99 [16436:9724:1116/122005.998:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 12:20:05.99 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 12:20:05.99 ERROR: Failed parsing Certificate
+11월 16, 2023 12:20:06.00 
+11월 16, 2023 12:21:41.18 [16436:12092:1116/122141.179:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 12:21:41.18 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 12:21:41.18 ERROR: Failed parsing Certificate
+11월 16, 2023 12:21:41.18 
+11월 16, 2023 12:30:15.41 [16436:9724:1116/123015.411:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 12:30:15.41 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 12:30:15.41 ERROR: Failed parsing Certificate
+11월 16, 2023 12:30:15.41 
+11월 16, 2023 12:32:13.39 [16436:15692:1116/123213.395:ERROR:device_event_log_impl.cc(192)] [12:32:13.395] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+11월 16, 2023 12:32:25.94 [16436:12092:1116/123225.946:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 12:32:25.94 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 12:32:25.94 ERROR: Failed parsing Certificate
+11월 16, 2023 12:32:25.94 
+11월 16, 2023 12:32:26.01 [16436:12092:1116/123226.013:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 12:32:26.01 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 12:32:26.01 ERROR: Failed parsing Certificate
+11월 16, 2023 12:32:26.01 
+11월 16, 2023 12:41:36.27 [16436:9724:1116/124136.278:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 12:41:36.27 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 12:41:36.27 ERROR: Failed parsing Certificate
+11월 16, 2023 12:41:36.27 
+11월 16, 2023 13:09:46.52 [16436:9724:1116/130946.525:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 13:09:46.52 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 13:09:46.52 ERROR: Failed parsing Certificate
+11월 16, 2023 13:09:46.52 
+11월 16, 2023 13:12:08.55 [16436:9724:1116/131208.550:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 13:12:08.55 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 13:12:08.55 ERROR: Failed parsing Certificate
+11월 16, 2023 13:12:08.55 
+11월 16, 2023 13:18:36.15 [16436:9724:1116/131836.154:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 13:18:36.15 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 13:18:36.15 ERROR: Failed parsing Certificate
+11월 16, 2023 13:18:36.15 
+11월 16, 2023 13:21:41.14 [16436:9724:1116/132141.140:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 13:21:41.14 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 13:21:41.14 ERROR: Failed parsing Certificate
+11월 16, 2023 13:21:41.14 
+11월 16, 2023 13:21:55.55 [16436:15692:1116/132155.559:ERROR:sharing_service.cc(250)] Device un-registration failed with fatal error
+11월 16, 2023 13:21:57.05 [16436:15692:1116/132157.053:ERROR:device_event_log_impl.cc(192)] [13:21:57.053] Bluetooth: bluetooth_adapter_winrt.cc:1058 Getting Default Adapter failed.
+11월 16, 2023 13:50:12.57 [16436:9724:1116/135012.571:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 13:50:12.57 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 13:50:12.57 ERROR: Failed parsing Certificate
+11월 16, 2023 13:50:12.57 
+11월 16, 2023 14:40:56.88 [16436:9724:1116/144056.880:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 14:40:56.88 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 14:40:56.88 ERROR: Failed parsing Certificate
+11월 16, 2023 14:40:56.88 
+11월 16, 2023 14:57:16.26 [16436:12092:1116/145716.267:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 14:57:16.26 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 14:57:16.26 ERROR: Failed parsing Certificate
+11월 16, 2023 14:57:16.26 
+11월 16, 2023 14:58:11.12 [16436:9724:1116/145811.120:ERROR:cert_issuer_source_aia.cc(34)] Error parsing cert retrieved from AIA (as DER):
+11월 16, 2023 14:58:11.12 ERROR: Couldn't read tbsCertificate as SEQUENCE
+11월 16, 2023 14:58:11.12 ERROR: Failed parsing Certificate
+11월 16, 2023 14:58:11.12 
